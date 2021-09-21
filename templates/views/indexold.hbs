@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+     {{>link}}
+    <title>Real Time Chat App</title>
+  </head>
+  <body>
+    <h1>Chat App</h2>
+
+    {{!-- <h2 id="msg_txt"></h2> --}}
+    <div id="msg_div"></div>
+
+    <form action="" id="msg_form">
+      
+      <input type="text" name="msg_input" value="" placeholder="write mesaage">
+
+      <button >send</button>
+    </form>
+
+    <button id="send_location">Send Location</button>
+     
+     
+  </body>
+
+  <script id="msg_template" type="text/html">
+  <div> <p>msg is: {msg}</p></div>
+ 
+  </script>
+
+
+  
+</html>
