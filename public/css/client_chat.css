@@ -1,267 +1,262 @@
 body {
-    margin:0;
-    padding:0;
-    overflow:hidden;
-    background-color:black;
-    }
-    section{
-    min-height:100%;
-    width:100%;
-      position:absolute ;  background:radial-gradient(#333,#000);
-    }
-    .leaf{
-        position:absolute ;
-        width:100%;
-        height:100%;
-        top:0;
-        left:0;
-    }
-    .leaf div{
-    position:absolute ;
-    display:block ;
-    }
-    .leaf div:nth-child(1){
-        left:20%; 
-        animation:fall 15s linear infinite ;
-        animation-delay:-2s;
-    
-    }
-    .leaf div:nth-child(2){
-        left:70%; 
-        animation:fall 15s linear infinite ;
-        animation-delay:-4s;
-    }
-    .leaf div:nth-child(3){
-        left:10%; 
-        animation:fall 20s linear infinite ;
-        animation-delay:-7s;
-        
-    }
-    .leaf div:nth-child(4){
-        left:50%; 
-       animation:fall 18s linear infinite ; 
-       animation-delay:-5s;
-    }
-    .leaf div:nth-child(5){
-        left:85%; 
-        animation:fall 14s linear infinite ;
-        animation-delay:-5s;
-    }
-    .leaf div:nth-child(6){
-        left:15%; 
-        animation:fall 16s linear infinite ;
-        animation-delay:-10s;
-    }
-    .leaf div:nth-child(7){
-        left:90%; 
-        animation:fall 15s linear infinite ;
-        animation-delay:-4s;
-    }
-    
-    @keyframes fall{
-        0%{
-            opacity:1;
-            top:-10%;
-            transform:translateX (20px) rotate(0deg);
-        }
-        20%{
-            opacity:0.8;
-            transform:translateX (-20px) rotate(45deg);
-        }
-        40%{
-    
-            transform:translateX (-20px) rotate(90deg);
-        }
-        60%{
-            
-           transform:translateX (-20px) rotate(135deg); 
-        }
-        80%{
-        
-            transform:translateX (-20px) rotate(180deg);
-        }
-        100%{
-            
-            top:110%;
-            transform:translateX (-20px) rotate(225deg);
-        }
-        }
-    .leaf1{
-        transform: rotateX(180deg);
-    }
-    .outer
-    {
-        z-index: 99;
-        position:absolute ;
-        top:10%;
-        width:100%;
-          font-family: 'Courgette', cursive;
-        font-size:20px;
-        text-align:center;
-        transform:translate ;
-        color:#fff;
-        transform:translateY (-50%);
-    }
-.inner{
-   margin-top:40px ;
-    width: 80%;
-    height: 80%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+section {
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  background: radial-gradient(#333, #000);
+}
+.leaf {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.leaf div {
+  position: absolute;
+  display: block;
+}
+.leaf div:nth-child(1) {
+  left: 20%;
+  animation: fall 15s linear infinite;
+  animation-delay: -2s;
+}
+.leaf div:nth-child(2) {
+  left: 70%;
+  animation: fall 15s linear infinite;
+  animation-delay: -4s;
+}
+.leaf div:nth-child(3) {
+  left: 10%;
+  animation: fall 20s linear infinite;
+  animation-delay: -7s;
+}
+.leaf div:nth-child(4) {
+  left: 50%;
+  animation: fall 18s linear infinite;
+  animation-delay: -5s;
+}
+.leaf div:nth-child(5) {
+  left: 85%;
+  animation: fall 14s linear infinite;
+  animation-delay: -5s;
+}
+.leaf div:nth-child(6) {
+  left: 15%;
+  animation: fall 16s linear infinite;
+  animation-delay: -10s;
+}
+.leaf div:nth-child(7) {
+  left: 90%;
+  animation: fall 15s linear infinite;
+  animation-delay: -4s;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 1;
+    top: -10%;
+    transform: translateX (20px) rotate(0deg);
+  }
+  20% {
+    opacity: 0.8;
+    transform: translateX (-20px) rotate(45deg);
+  }
+  40% {
+    transform: translateX (-20px) rotate(90deg);
+  }
+  60% {
+    transform: translateX (-20px) rotate(135deg);
+  }
+  80% {
+    transform: translateX (-20px) rotate(180deg);
+  }
+  100% {
+    top: 110%;
+    transform: translateX (-20px) rotate(225deg);
+  }
+}
+.leaf1 {
+  transform: rotateX(180deg);
+}
+.outer {
+  z-index: 99;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  min-height: 100%;
+  font-family: "Courgette", cursive;
+  font-size: 20px;
+  text-align: center;
+  transform: translate;
+  color: #fff;
+  transform: translateY (-50%);
+}
+.inner {
+  margin-top: 40px;
+  width: 80%;
+  min-height: 80%;
 }
 
 label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 8px;
-    color: #777;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #777;
 }
 
 input {
-    border: 1px solid #eeeeee;
-    padding: 12px;
-    outline: none;
+  border: 1px solid #eeeeee;
+  padding: 12px;
+  outline: none;
 }
 
 button {
-    cursor: pointer;
-    padding: 12px;
-    background: #20b2aa;
-    border: none;
-    color: white;
-    font-size: 16px;
-    transition: background .3s ease;
+  cursor: pointer;
+  padding: 12px;
+  background: #20b2aa;
+  border: none;
+  color: white;
+  font-size: 16px;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-    background: #20b2aa;
+  background: #20b2aa;
 }
 
 button:disabled {
-    cursor: default;
-    background:#20b2aa;
+  cursor: default;
+  background: #20b2aa;
 }
 
 /* Join Page Styles */
 
 .centered-form {
-    background: #333744;
-    width: 100vw;
-    height: 100vh;   
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: #333744;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .centered-form__box {
-    box-shadow: 0px 0px 17px 1px #1D1F26;
-    background: #F7F7FA;
-    padding: 24px;
-    width: 250px;
+  box-shadow: 0px 0px 17px 1px #1d1f26;
+  background: #f7f7fa;
+  padding: 24px;
+  width: 250px;
 }
 
 .centered-form button {
-    width: 100%;
+  width: 100%;
 }
 
 .centered-form input {
-    margin-bottom: 16px;
-    width: 100%;
+  margin-bottom: 16px;
+  width: 100%;
 }
 
 /* Chat Page Layout */
 
 .chat {
-    display: flex;
+  display: flex;
 }
 
 .chat__sidebar {
-    height: 100vh;
-    color: white;
-    background: #333744;
-    width: 225px;
-    overflow-y: scroll
+  height: 100vh;
+  color: white;
+  background: #333744;
+  width: 225px;
+  overflow-y: scrol;
 }
 
 /* Chat styles */
 
 .chat__main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    max-height: 100vh;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
 }
 
 .chat__messages {
-    flex-grow: 1;
-    padding: 24px 24px 0 24px;
-    overflow-y: scroll;
+  flex-grow: 1;
+  padding: 24px 24px 0 24px;
+  overflow-y: scroll;
 }
 
 /* Message Styles */
 
 .message {
-    margin-bottom: 16px;   
+  margin-bottom: 16px;
 }
 
 .message__name {
-    font-weight: 600;
-    font-size: 14px;
-    margin-right: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 8px;
 }
 
 .message__meta {
-    color: #777;
-    font-size: 14px;
+  color: #777;
+  font-size: 14px;
 }
 
 .message a {
-    color: #0070CC;
+  color: #0070cc;
 }
 
 /* Message Composition Styles */
 
 .compose {
-    display: flex;
-    flex-shrink: 0;
-    margin-top: 16px;
-    padding: 24px;
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 16px;
+  padding: 24px;
 }
 
 .compose form {
-    display: flex;
-    flex-grow: 1;
-    margin-right: 16px;
+  display: flex;
+  flex-grow: 1;
+  margin-right: 16px;
 }
 
 .compose input {
-    border: 1px solid #eeeeee;
-    width: 100%;
-    padding: 12px;
-    margin: 0 16px 0 0;
-    flex-grow: 1;
+  border: 1px solid #eeeeee;
+  width: 100%;
+  padding: 12px;
+  margin: 0 16px 0 0;
+  flex-grow: 1;
 }
 
 .compose button {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 /* Chat Sidebar Styles */
 
 .room-title {
-    font-weight: 400;
-    font-size: 22px;
-    background: #2c2f3a;
-    padding: 24px;   
+  font-weight: 400;
+  font-size: 22px;
+  background: #2c2f3a;
+  padding: 24px;
 }
 
 .list-title {
-    font-weight: 500;
-    font-size: 18px;
-    margin-bottom: 4px;
-    padding: 12px 24px 0 24px;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 4px;
+  padding: 12px 24px 0 24px;
 }
 
 .users {
-    list-style-type: none;
-    font-weight: 300;
-    padding: 12px 24px 0 24px;
+  list-style-type: none;
+  font-weight: 300;
+  padding: 12px 24px 0 24px;
 }

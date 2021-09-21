@@ -20,6 +20,28 @@ const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
+const autoscroll = () => {
+  // New message element
+  const $newMessage = $msg_div.lastElementChild;
+
+  // Height of the new message
+  const newMessageStyles = getComputedStyle($newMessage);
+  const newMessageMargin = parseInt(newMessageStyles.marginBottom);
+  const newMessageHeight = $newMessage.offsetHeight + newMessageMargin;
+
+  // Visible height
+  const visibleHeight = $msg_div.offsetHeight;
+
+  // Height of messages container
+  const containerHeight = $msg_div.scrollHeight;
+
+  // How far have I scrolled?
+  const scrollOffset = $msg_div.scrollTop + visibleHeight;
+
+  if (containerHeight - newMessageHeight <= scrollOffset) {
+    $msg_div.scrollTop = $msg_div.scrollHeight;
+  }
+};
 //-------------
 c_socket.on("displayMsg", (msg_obj) => {
   // $msg_txt.innerHTML = msg;
@@ -30,6 +52,7 @@ c_socket.on("displayMsg", (msg_obj) => {
     createdAt: moment(msg_obj.createdAt).format("h:mm a"),
   });
   $msg_div.insertAdjacentHTML("beforeend", html);
+  autoscroll();
 });
 c_socket.on("displayLoc", (loc_obj) => {
   const html = Mustache.render($loc_template, {
@@ -38,6 +61,8 @@ c_socket.on("displayLoc", (loc_obj) => {
     createdAt: moment(loc_obj.createdAt).format("h:mm a"),
   });
   $loc_div.insertAdjacentHTML("beforeend", html);
+
+  autoscroll();
 });
 
 //------------
